@@ -13,7 +13,7 @@ function sendRequestModified(){
 		}
 	};
 	
-	xmlHttp.send(body);	
+	xmlHttp.send(body);
 	
 }
 
