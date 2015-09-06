@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Consultar estudiante</title>
+	<link rel="stylesheet" href="../../css/bootstrap.css">
+	<script src="../../javascript/zxml.js"></script>
+	<script src="../../javascript/student/getStudentData.js"></script>
+</head>
+<body>
+	<nav class="navbar navbar-default">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <a class="navbar-brand" href="../../index.html">Inicio</a>
+	    </div>
+	    <div>
+	      <ul class="nav navbar-nav">
+	        <li><a href="create.html">Altas</a></li>
+	        <li class="active"><a href="read.html">Consultas</a></li>
+	        <li><a href="update.html">Modificaciones</a></li> 
+	        <li><a href="delete.html">Bajas</a></li> 
+	      </ul>
+	    </div>
+	  </div>
+	</nav>
+	<div class="container">
+		<h3 class="text-center">Escriba la matrícula del estudiante para obtener la información</h3>
+		<div class="form-horizontal">
+			<div class="form-group">
+		    <label class="control-label col-sm-2" for="id">Matricula:</label>
+		    <div class="col-sm-10">
+		      <input type="text" class="form-control"placeholder="Ingrese una matrícula" id="studentId" name="id" maxlength="8" required>
+		    </div>
+		  </div>
+		  <div class="form-group"> 
+		    <div class="col-sm-offset-2 col-sm-10">
+		      <button type="submit" class="btn btn-primary" onclick="requestCustomerInfo()">Buscar estudiante</button>
+		    </div>
+		  </div>
+		</div>
+		<div id="divCustomerInfo" class="text-info text-center"></div>
+	</div>
+</body>
+</html>
