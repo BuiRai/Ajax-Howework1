@@ -1,5 +1,5 @@
 function sendRequestModified(){
-	var form = document.getElementById("updateDataStudent");
+	var form = document.getElementById("updateDataTutor");
 	var body = getRequestBodyModified(form);
 	var xmlHttp = zXmlHttp.createRequest();
 	xmlHttp.open("post",form.action, true);

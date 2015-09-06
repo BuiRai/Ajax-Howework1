@@ -24,7 +24,7 @@
 	if (mysqli_query($link, $query) == true) {
 		echo "<h3 class='text-success'>Se ha creado con éxito el estudiante</h3>";
 	}else{
-		echo "<h3 class='text-danger'>NO se creó el estudiante, algo ocurrio</h3>";
+		echo "<h3 class='text-danger'>No se creó el estudiante, algo ocurrio</h3>";
 	}
 
 	mysqli_close($link);
