@@ -4,6 +4,8 @@
 	<meta charset="UTF-8">
 	<title>Crear estudiante</title>
 	<link rel="stylesheet" href="../../css/bootstrap.css">
+	<script src="../../javascript/zxml.js"></script>
+	<script src="../../javascript/getInfoStudent.js"></script>
 </head>
 <body>
 	<nav class="navbar navbar-default">
@@ -32,10 +34,11 @@
 			  </div>
 			  <div class="form-group"> 
 			    <div class="col-sm-offset-2 col-sm-10">
-			      <button type="submit" class="btn btn-primary">Buscar estudiante</button>
+			      <button type="submit" class="btn btn-primary" onclick="requestCustomerInfo()">Buscar estudiante</button>
 			    </div>
 			  </div>
 			</div>
+			<div class="divCustomerInfo"></div>
 	</div>
 </body>
 </html>
