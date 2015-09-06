@@ -1,7 +1,7 @@
 <?php
 	header("Content-Type:text/plain");
 	$id = $_GET["id"];
-	include "DBVar.php";
+	include "../DBVar.php";
 	
 	$link = mysqli_connect($DBServer, $DBUser, $DBPass, $DBName);
 
@@ -16,7 +16,8 @@
 	if ( mysqli_num_rows($result) > 0 ) {
 		$row = mysqli_fetch_array($result);
 ?>	
-		<form class="form-horizontal" role="form" method="post" action="../../php/saveStudent.php" onsubmit="sendRequest(); return false">
+		
+		<form id="updateDataStudent" class="form-horizontal" role="form" method="post" action="../../php/student/saveDataModified.php" onsubmit="sendRequestModified(); return false">
 			<h3 class="text-center">Ingrese los datos para modificar al estudiante</h3>
 			<div class="form-group">
 			    <label class="control-label col-sm-2" for="id">Matricula:</label>
@@ -68,17 +69,14 @@
 			</div>
 			<div class="form-group"> 
 			    <div class="col-sm-offset-2 col-sm-10">
-			      <button type="submit" class="btn btn-primary" name="updateStudentData">Modificar información</button>
+			      <button type="submit" class="btn btn-primary" >Modificar información</button>
 			    </div>
 			</div>
 		</form>
+		<div id="divStatus" class="text-info text-center"></div>
 <?php 
 	}else{
 		echo "<h2 class='text-danger text-center'>No se encuentra registrada la matrícula: '$id'</h2>";
-	}
-
-	if (isset($_POST["updateStudentData"])) {
-		echo "SE MANDO";
 	}
 
 	mysqli_close($link);

@@ -11,7 +11,7 @@
 	$email = $_POST["email"];
 	$career = $_POST["career"];
 
-	include "DBVar.php";
+	include "../DBVar.php";
 
 	$link = mysqli_connect($DBServer, $DBUser, $DBPass, $DBName);
 	
