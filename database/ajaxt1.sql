@@ -57,3 +57,7 @@ ALTER TABLE `student`
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+INSERT INTO `ajaxt1`.`student` (`id`, `name`, `lastname`, `birthdate`, `dateAdmission`, `gender`, `email`, `career`) VALUES 
+('11111111', 'Jose', 'Santos Bolaños', '01-01-1993', '01-01-2015', 'M', 'jose@gmail.com', 'Ing. de Software'), 
+('22222222', 'Maria', 'Arvizu Olivas', '02-02-1890', '02-02-2015', 'F', 'marvizu@gmail.com', 'Actriz de doblaje');

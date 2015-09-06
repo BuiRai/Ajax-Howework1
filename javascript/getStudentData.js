@@ -1,8 +1,9 @@
 function requestCustomerInfo(){
-	var sid = document.getElementById("txtCustomerId").value;
+	var sid = document.getElementById("studentId").value;
+	console.log(sid);
 	//top.frames["hiddenFrame"].location = "GetCustomerData3.php?id="+sid;
 	var xmlHttp = zXmlHttp.createRequest();
-	xmlHttp.open("get", "getStudentData.php?id="+sid, true);
+	xmlHttp.open("get", "../../php/getStudentData.php?id="+sid, true);
 	xmlHttp.onreadystatechange = function(){
 		if(xmlHttp.readyState == 4 && xmlHttp.status == 200){
 			displayCustomerInfo(xmlHttp.responseText);
