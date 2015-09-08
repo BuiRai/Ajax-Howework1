@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 06-09-2015 a las 20:41:15
+-- Tiempo de generación: 08-09-2015 a las 05:40:36
 -- Versión del servidor: 5.6.26
 -- Versión de PHP: 5.6.12
 
@@ -19,6 +19,25 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `ajaxt1`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `manager`
+--
+
+CREATE TABLE IF NOT EXISTS `manager` (
+  `id` varchar(8) COLLATE utf8_unicode_ci NOT NULL,
+  `name` varchar(25) COLLATE utf8_unicode_ci NOT NULL,
+  `pass` varchar(25) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `manager`
+--
+
+INSERT INTO `manager` (`id`, `name`, `pass`) VALUES
+('1234', 'admin', 'admin');
 
 -- --------------------------------------------------------
 
@@ -72,6 +91,12 @@ INSERT INTO `tutor` (`id`, `name`, `lastname`, `gender`, `area`, `email`) VALUES
 --
 -- Índices para tablas volcadas
 --
+
+--
+-- Indices de la tabla `manager`
+--
+ALTER TABLE `manager`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `student`
